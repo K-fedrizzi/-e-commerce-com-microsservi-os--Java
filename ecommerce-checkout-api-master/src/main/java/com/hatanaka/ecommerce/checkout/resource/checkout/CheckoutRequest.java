@@ -1,10 +1,16 @@
 package com.hatanaka.ecommerce.checkout.resource.checkout;
 
-
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
+import java.util.List;
 
 @Data
-public class CheckoutRequest {
+@AllArgsConstructor
+@NoArgsConstructor
+public class CheckoutRequest implements Serializable {
 
     private String firstName;
     private String lastName;
@@ -21,4 +27,6 @@ public class CheckoutRequest {
     private String cardNumber;
     private String cardDate;
     private String cardCvv;
+    private List<String> products;
 }
+
